@@ -2,36 +2,51 @@
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!-- Bootstrap -->
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <head>
+        <!-- Bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
 <!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
 <!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-	</head>
-	<body>
-		<div class="container">
-		<nav>
-			<ul class="nav nav-pills nav-justified">
-				<li role="presentation" class="active"><a href="/teamgadgeteers/index.html">Home</a></li>
-				<li role="presentation" class="active"><a href="/teamgadgeteers/puzzle.html">Puzzle</a></li>
-				<li role="presentation" class="active"><a href="/teamgadgeteers/piano.html">Piano</a></li>
-			</ul>
-		</nav>
-		
-		<div tabindex="0" role="main" id="mainContents" class="jumbotron">
+  <script src="flocking/flocking-all.js"></script>
 
-		<div id="home">
-			<h1 class="focused" tabindex="-1"> Welcome to the Accessible Maker Kit Project!</h1>
-			<p> How to use the makey makey...</p>
-		</div>
-		</div>
-		</div>
-	</body>
+        <script src="myStuff.js"></script>
+    </head>
+    <body>
+        <div class="container">
+        <nav>
+            <ul class="nav nav-pills nav-justified">
+                <li role="presentation" class="active"><a href="/teamgadgeteers/index.html">Home</a></li>
+                <li role="presentation" class="active"><a href="/teamgadgeteers/puzzle.html">Puzzle</a></li>
+                <li role="presentation" class="active"><a href="/teamgadgeteers/piano.html">Piano</a></li>
+            </ul>
+        </nav>
+        
+        <div tabindex="0" role="main" id="mainContents" class="jumbotron">
+
+        <div id="home">
+            <h1 class="focused" tabindex="-1"> Welcome to the Accessible Maker Kit Project!</h1>
+            <p> How to use the makey makey...</p>
+        </div>
+        </div>
+        </div>
+        <script>
+window.addEventListener("keydown", checkKeyPressed, false);
+function checkKeyPressed(e) {
+    if (e.keyCode == "103") {
+        myStuff.play();
+    }
+    else if (e.keyCode == "66") {
+        myStuff.play();;
+    }
+}
+            
+        </script>
+    </body>
 </html>
-  
+
