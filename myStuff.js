@@ -17,8 +17,13 @@
     // Simple sine wave oscillator
 var synth = flock.synth({
     synthDef: {
-        ugen: "flock.ugen.sinOsc",
-        freq: 440,
+        ugen: "flock.ugen.impulse",
+        freq: {
+            ugen: "flock.ugen.xLine",
+            start: 880,
+            end: 2,
+            duration: 3.0
+        },
         mul: 0.25
     }
 });
