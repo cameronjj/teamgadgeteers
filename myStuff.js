@@ -12,28 +12,27 @@
 
     // Expose any public functions or constructors as properties on your namesapce.
     myStuff.play = function () {
-        // Triangle oscillator.
-    // Triggers a note whenever the mouse is clicked.
-    // Simple sine wave oscillator
-var synth = flock.synth({
-    synthDef: {
-        ugen: "flock.ugen.impulse",
-        freq: {
-            ugen: "flock.ugen.xLine",
-            start: 880,
-            end: 2,
-            duration: 3.0
-        },
-        mul: 0.25
-    }
-});
-      
 
-   
-        // If you're on iOS, you will need to call in a listener for
-        // some kind of user input action, such a button click or touch handler.
-        // This is because iOS will only play sound if the user initiated it.
+        var synth = flock.synth({
+            synthDef: {
+               /* ugen: "flock.ugen.playBuffer", // example of a .wav file input
+                buffer:{
+                    id:"frog",
+                    url:"sounds/frogs.wav",
+                } */
+                ugen: "flock.ugen.sinOsc",
+                freq: 440,
+                duration: 1.0
+            }
+        });
+
         enviro.play();
     };
 
+    myStuff.end = function () {
+        enviro.stop();
+    }
+
 }());
+
+   
