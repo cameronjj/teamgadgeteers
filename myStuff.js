@@ -15,14 +15,14 @@
 
         var synth = flock.synth({
             synthDef: {
-               /* ugen: "flock.ugen.playBuffer", // example of a .wav file input
+                ugen: "flock.ugen.playBuffer", // example of a .wav file input
                 buffer:{
                     id:"frog",
                     url:"sounds/frogs.wav",
-                }*/ 
+                }/* 
                 ugen: "flock.ugen.sinOsc",
                 freq: 440,
-                duration: 1.0
+                duration: 1.0*/
             }
         });
 
