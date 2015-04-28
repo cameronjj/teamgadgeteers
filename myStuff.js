@@ -19,7 +19,11 @@
                 buffer:{
                     id:"frog",
                     url:"sounds/frogs.wav",
+
                 }/* 
+
+                } /*
+
                 ugen: "flock.ugen.sinOsc",
                 freq: 440,
                 duration: 1.0*/
