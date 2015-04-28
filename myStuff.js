@@ -18,7 +18,7 @@
                 ugen: "flock.ugen.playBuffer", // example of a .wav file input
                 buffer:{
                     id:"frog",
-                    url:"sounds/A.wav",
+                    url:"sounds/frogs.wav",
 
                 }/* 
 
