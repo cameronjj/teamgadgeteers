@@ -17,7 +17,7 @@
             synthDef: {
                 ugen: "flock.ugen.playBuffer", // example of a .wav file input
                 buffer:{
-                    id:"frog",
+                    id:"A",
                     url:"sounds/A.wav",
 
                 }/* 
