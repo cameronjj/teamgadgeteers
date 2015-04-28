@@ -6,12 +6,12 @@
 
     // Define a unique global namespace for your stuff.
     // You should change this to a namespace that is appropriate for your project.
-    fluid.registerNamespace("myStuff");
+    fluid.registerNamespace("myStuffA");
 
     var enviro = flock.init();
 
     // Expose any public functions or constructors as properties on your namesapce.
-    myStuff.play = function () {
+    myStuffA.play = function () {
 
         var synth = flock.synth({
             synthDef: {
@@ -31,7 +31,7 @@
         enviro.play();
     };
 
-    myStuff.end = function () {
+    myStuffA.end = function () {
         enviro.stop();
     }
 
