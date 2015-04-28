@@ -19,7 +19,7 @@ int keyCodes[NUM_INPUTS] = {
 
   'j',      // up arrow pad
   'k',    // down arrow pad
-  'l',    // left arrow pad
+  'i',    // left arrow pad
   'm',   // right arrow pad
   'o',               // space button pad
   'p',        // click button pad
