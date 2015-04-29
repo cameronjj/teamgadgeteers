@@ -6,19 +6,21 @@
 
     // Define a unique global namespace for your stuff.
     // You should change this to a namespace that is appropriate for your project.
-    fluid.registerNamespace("myStuff");
+    fluid.registerNamespace("myStuffK");
 
-    var enviro = flock.init();
+    var enviro10 = flock.init();
 
     // Expose any public functions or constructors as properties on your namesapce.
-    myStuff.play = function () {
+    myStuffK.play = function () {
 
         var synth = flock.synth({
             synthDef: {
                 ugen: "flock.ugen.playBuffer", // example of a .wav file input
                 buffer:{
-                    id:"frog",
-                    url:"sounds/frogs.wav",
+                    id:"K",
+                    url:"sounds/K.wav",
+
+                }/* 
                 } /*
                 ugen: "flock.ugen.sinOsc",
                 freq: 440,
@@ -26,13 +28,11 @@
             }
         });
 
-        enviro.play();
+        enviro10.play();
     };
 
-    myStuff.end = function () {
-        enviro.stop();
+    myStuffK.end = function () {
+        enviro10.stop();
     }
 
 }());
-
-   
