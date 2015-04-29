@@ -8,7 +8,7 @@
     // You should change this to a namespace that is appropriate for your project.
     fluid.registerNamespace("myStuffA");
 
-    var enviro = flock.init();
+    var enviro1 = flock.init();
 
     // Expose any public functions or constructors as properties on your namesapce.
     myStuffA.play = function () {
@@ -28,11 +28,11 @@
             }
         });
 
-        enviro.play();
+        enviro1.play();
     };
 
     myStuffA.end = function () {
-        enviro.stop();
+        enviro1.stop();
     }
 
 }());
