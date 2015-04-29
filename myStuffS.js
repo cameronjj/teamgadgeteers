@@ -6,7 +6,7 @@
 
     // Define a unique global namespace for your stuff.
     // You should change this to a namespace that is appropriate for your project.
-    fluid.registerNamespace("myStuffA");
+    fluid.registerNamespace("myStuffS");
 
     var enviro13 = flock.init();
 
