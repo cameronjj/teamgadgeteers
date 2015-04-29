@@ -16,8 +16,9 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 		<script src="flocking/flocking-all.js"></script>
 
-        <script src="myStuff.js"></script>
-  	<script src="myStuffA.js"></script>
+       
+	 <script src="myStuffA.js"></script>
+	  <script src="myStuffZ.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -69,10 +70,10 @@
 window.addEventListener("keydown", checkKeyPressed, false);
 function checkKeyPressed(e) {
     if (e.keyCode == "90") {//Z
-        myStuff.play();
+        myStuffZ.play();
         setTimeout(function() { // will call the end function after 1 second
-            myStuff.end();
-        }, 3000);
+            myStuffZ.end();
+        }, 2000);
     }
     else if (e.keyCode == "72") {//H
         myStuff.play();
