@@ -16,7 +16,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 		<script src="flocking/flocking-all.js"></script>
 
-       
+       	<script src="myStuff.js"></script>
 	 <script src="myStuffA.js"></script>
 	 <script src="myStuffZ.js"></script>
 	</head>
@@ -73,7 +73,7 @@ function checkKeyPressed(e) {
         myStuffZ.play();
         setTimeout(function() { // will call the end function after 1 second
             myStuffZ.end();
-        }, 100);
+        }, 3000);
     }
     else if (e.keyCode == "72") {//H
         myStuff.play();
@@ -85,7 +85,7 @@ function checkKeyPressed(e) {
         myStuffA.play();
         setTimeout(function() { // will call the end function after 1 second
             myStuffA.end();
-        }, 100);
+        }, 3000);
     }
     else if (e.keyCode == "83") {//S
         myStuff.play();
