@@ -106,7 +106,8 @@ int pins[6]; //holds analogRead from pins
 int pieces[6]; //holds the index the connected resistor value
 bool places[6]={false,false,false,false,false,false}; //holds if there is a piece in a spot - gives a delay for removal
 bool firstPlaced[6]={false,false,false,false,false,false}; //holds if there is a piece placed for the first time
-long acc[6]; //holds count if a piece has been removed
+long acc[6]={501,501,501,501,501,501}; //holds count if a piece has been removed; starts at max to not trigger until after first piece is placed
+long acc2[6]; //holds count as a piece is added for accurate resistance reading
 float R0 = 1000; //comparative resistor value for voltage divide
 
 ///////////////////////////
@@ -390,15 +391,24 @@ void checkFirst(){
 
 void checkState(){
   for(int i=0; i<6; i++){
-    if(pins[i] != 0){
+    if(pins[i] != 0 && acc2[i]<500 && places[i]==false){
+      acc2[i]++;
+    }
+    if(pins[i] != 0 && acc2[i]==500){
       places[i]=true;
       acc[i]=0;
+      acc2[i]=0;
     }
-    if(pins[i]==0 && acc[i]<1000){
+    if(pins[i]==0 && acc[i]<500){
       acc[i]++;
     }
-    if(pins[i]==0 && acc[i]==1000){
+    if(pins[i]==0 && acc[i]==500){
       places[i]=false;
+      Keyboard.press(pinOutput[i]);
+      Keyboard.release(pinOutput[i]);
+      Keyboard.press('m');
+      Keyboard.release('m');
+      acc[i]++;
     }
   }
 }
@@ -407,8 +417,8 @@ void printKeys(){
   for(int i=0; i<6; i++){
     if(firstPlaced[i]==true && places[i]==true){
       Keyboard.press(pinOutput[i]);
-      Keyboard.press(resOutput[pieces[i]]);
       Keyboard.release(pinOutput[i]);
+      Keyboard.press(resOutput[pieces[i]]);
       Keyboard.release(resOutput[pieces[i]]);
     }
   }
